@@ -1,15 +1,15 @@
-import './App.css';
-import Search from './components/search';
+import "./App.css";
+import "./Background/mainBackGround.css";
+import Search from "./components/search";
 
 function App() {
-
   const handleOnSearchChange = (searchData) => {
     console.log(searchData);
-  }
+  };
 
   return (
     <div className="container">
-     <Search onSearchChange={handleOnSearchChange}/>
+      <Search onSearchChange={handleOnSearchChange} />
     </div>
   );
 }
