@@ -1,10 +1,7 @@
 body {
-    margin: center;
-    font-family: sans-serif, Arial !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: rgb(134, 134, 134);
-    background-image: url("mainBackground.jpg");
-    background-repeat: no-repeat;
+    background: url("mainBackground.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
