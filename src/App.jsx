@@ -1,6 +1,6 @@
 import "./App.css";
-import "./Background/mainBackGround.css";
-import Search from "./components/search";
+import "./Layout/mainBackGround.css";
+import Search from "./components/SearchBar/search";
 import CurrentWeather from "./components/current-weather/currentWeather";
 
 function App() {
