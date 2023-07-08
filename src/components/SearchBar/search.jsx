@@ -3,7 +3,7 @@ import { AsyncPaginate } from "react-select-async-paginate";
 import { geoApiOptions, geoApiUrl } from "../APIs/Geo/geoApi";
 
 //This function configures the search bar
-const Search = ({ onSearchChange }) => {
+const Search = (onSearchChange) => {
   const [search, setSearch] = useState(null);
 
   //This function displays suggested cities in the search bar and makes an API call for the city data
