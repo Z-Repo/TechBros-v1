@@ -6,18 +6,26 @@ import Map from "./components/Map/Map";
 import { useState } from "react";
 
 function App() {
-  const [position, setPosition] = useState(null);
+  const [longitude, setLongitude] = useState("-75.1732");
+  const [latitude, setLatitude] = useState("39.9448");
 
   const handleOnSearchChange = (searchData) => {
     console.log(searchData);
-    setPosition(searchData.value);
+    const [lati, long] = searchData.value.split(" ");
+    setLongitude(long);
+    setLatitude(lati);
   };
 
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange} />
       <CurrentWeather />
-      <Map position={[37.77493, -122.41944]} zoom={10} mapType="roadMap" />
+      <Map
+        longitude={longitude}
+        latitude={latitude}
+        zoom={11}
+        mapType="streetView"
+      />
     </div>
   );
 }
