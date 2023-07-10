@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // Importing some Hooks and components from google maps api which we will be using
 import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
 import "./map.css";
@@ -7,7 +7,11 @@ const libraries = ["places"];
 const Map = (props) => {
   // We Have to select some coordinates to give to the map to initially show the map from that point.
   // These are the latitude and longitude of Philadelphia, PA by default
-  const center = { lat: Number(props.latitude), lng: Number(props.longitude) };
+  let center = { lat: Number(props.latitude), lng: Number(props.longitude) };
+  // This will update the center whenever the latitude/longitude is changed/updated
+  useEffect(() => {
+    center = { lat: Number(props.latitude), lng: Number(props.longitude) };
+  }, [props.latitude, props.latitude]);
 
   //This loads our API KEY
   const { isLoaded } = useJsApiLoader({
