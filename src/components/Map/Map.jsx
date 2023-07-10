@@ -7,6 +7,7 @@ import {
   Autocomplete,
   DirectionsRenderer,
 } from "@react-google-maps/api";
+import "./map.css";
 
 const libraries = ["places"];
 const Map = (position, zoom, mapType) => {
@@ -21,8 +22,9 @@ const Map = (position, zoom, mapType) => {
   const destinationRef = useRef();
 
   // We Have to select some coordinates to give to the map to initially show the map from that point.
-  // This are the latitude and longitude of New Delhi, India
-  const center = { lat: 28.7041, lng: 77.1025 };
+  // This are the latitude and longitude of Philadelphia, PA
+  // We should replace these with dynamic variables based off the search bar
+  const center = { lat: 39.9448, lng: -75.1732 };
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: import.meta.env.VITE_GMA_KEY,
@@ -89,10 +91,10 @@ const Map = (position, zoom, mapType) => {
           )}
         </div> */}
 
-        <div style={{ width: "50vw", height: "100vh" }}>
+        <div className="map-container">
           <GoogleMap
             center={center}
-            zoom={15}
+            zoom={11}
             mapContainerStyle={{
               width: "100%",
               height: "100%",
