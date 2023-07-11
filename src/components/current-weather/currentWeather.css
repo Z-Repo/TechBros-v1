@@ -1,14 +1,20 @@
 .weather {
+<<<<<<< Updated upstream
   width: 500px;
   height: 400px;
+=======
+  width: 400px;
+>>>>>>> Stashed changes
   border-radius: 6px;
   box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 30%);
-  color: #000000;
+  color: #ffffff;
+  background: url(current-weather.jpg);
   margin: 20px auto 0 auto;
   padding: 0px 20px 20px 20px;
 }
 
-.top {
+.top,
+.bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,15 +22,15 @@
 
 .city {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 29px;
   line-height: 1;
   margin: 0;
   letter-spacing: 1px;
 }
 
 .weather-description {
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 19px;
   line-height: 1;
   margin: 0;
 }
@@ -34,9 +40,32 @@
 }
 
 .temperature {
-    font-size: 70px;
+    font-size: 90px;
     font-weight: 600;
     width: auto;
     letter-spacing: -5px;
     margin: 10px 0;
+}
+
+.details {
+  width: 100%;
+  margin: 0px 30px;
+  padding-left: 20px;
+}
+
+.parameter-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parameter-label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.parameter-value {
+  text-align: right;
+  font-weight: 600;
+  font-size: 16px;
 }

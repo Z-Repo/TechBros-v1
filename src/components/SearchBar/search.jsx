@@ -9,7 +9,7 @@ const Search = ({ onSearchChange }) => {
   //This function displays suggested cities in the search bar and makes an API call for the city data
   const loadOptions = (inputValue) => {
     return fetch(
-      `https://${geoApiUrl}?minPopulation=10000&namePrefix=${inputValue}`,
+      `https://${geoApiUrl}?minPopulation=1000000&namePrefix=${inputValue}`,
       geoApiOptions
     )
       .then((response) => response.json())
@@ -36,7 +36,7 @@ const Search = ({ onSearchChange }) => {
   return (
     <AsyncPaginate
       placeholder="Search for city"
-      debounceTimeout={600}
+      debounceTimeout={800}
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
