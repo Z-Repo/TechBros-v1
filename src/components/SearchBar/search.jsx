@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
-import { geoApiOptions, geoApiUrl } from "../APIs/Geo/geoApi";
+import { geoApiOptions, geoApiUrl } from "../APIs/geo/geoApi";
 
 //This function configures the search bar
 const Search = ({ onSearchChange }) => {
