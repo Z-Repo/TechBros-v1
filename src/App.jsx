@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import "./Layout/mainBackGround.css";
-import { weatherApiKey, weatherApiUrl } from "./components/APIs/geo/geoApi";
+import { weatherApiKey, weatherApiUrl } from "./components/APIs/weather/weatherApi";
 import Search from "./components/searchbar/search";
 import CurrentWeather from "./components/current-weather/currentWeather";
 import Map from "./components/map/map";
