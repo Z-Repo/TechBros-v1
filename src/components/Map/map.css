@@ -1,11 +1,12 @@
 .map-container{
-    position: fixed;
+    position: absolute;
     top:65%;
-    left:30%;
     bottom: 10%;
     width: 550px;
     height: 240px;
     border-radius: 6px;
     box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 30%);
     color: #000000;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
