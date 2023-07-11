@@ -19,10 +19,10 @@ function App() {
     setLatitude(lati);
 
     const currentWeatherFetch = fetch(
-      `${weatherApiUrl}/weather?lat=${lati}&lon=${long}&appid=${weatherApiKey}`
+      `${weatherApiUrl}/weather?lat=${lati}&lon=${long}&appid=${weatherApiKey}&units=imperial`
     );
     const forecastFetch = fetch(
-      `${weatherApiUrl}/forecast?lat=${lati}&lon=${long}&appid=${weatherApiKey}`
+      `${weatherApiUrl}/forecast?lat=${lati}&lon=${long}&appid=${weatherApiKey}&units=imperial`
     );
 
     Promise.all([currentWeatherFetch, forecastFetch])
@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange} />
-      <CurrentWeather />
+      { currentWeather && <CurrentWeather data={ currentWeather } /> }
       <Map
         longitude={longitude}
         latitude={latitude}
