@@ -5,6 +5,7 @@ import { weatherApiKey, weatherApiUrl } from "./components/APIs/weather/weatherA
 import Search from "./components/searchbar/search";
 import CurrentWeather from "./components/current-weather/currentWeather";
 import Map from "./components/map/map";
+import Forecast from "./components/forecast/forecast";
 
 function App() {
   const [longitude, setLongitude] = useState("-75.1732");
@@ -43,6 +44,7 @@ function App() {
     <div className="container">
       <Search onSearchChange={handleOnSearchChange} />
       { currentWeather && <CurrentWeather data={ currentWeather } /> }
+      { forecast && <Forecast data={ forecast } /> }
       <Map
         longitude={longitude}
         latitude={latitude}
