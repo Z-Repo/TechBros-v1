@@ -12,8 +12,7 @@
 .bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
+  align-items: center;}
 
 .city {
   font-weight: 600;
@@ -31,7 +30,8 @@
 }
 
 .weather-icon {
-  width: 200px;
+  width: 45%;
+  
 }
 
 .temperature {
@@ -44,18 +44,25 @@
 
 .details {
   width: 100%;
-  margin: 0px 30px;
-  padding-left: 100px;
+  margin: 0px 20px;
+  padding-left: 15%;
+  color: black;
 }
 
 .parameter-row {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 30%);
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 5px;
 }
 
 .parameter-label {
   text-align: left;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
 }
 
