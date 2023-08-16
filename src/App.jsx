@@ -1,15 +1,18 @@
 import { useState } from "react";
 import "./App.css";
 import "./Layout/mainBackGround.css";
-import { weatherApiKey, weatherApiUrl } from "./components/APIs/weather/weatherApi";
+import {
+  weatherApiKey,
+  weatherApiUrl,
+} from "./components/APIs/weather/weatherApi";
 import Search from "./components/searchbar/search";
 import CurrentWeather from "./components/current-weather/currentWeather";
 import Map from "./components/map/map";
 import Forecast from "./components/forecast/forecast";
 
 function App() {
-  const [longitude, setLongitude] = useState("-75.1732");
-  const [latitude, setLatitude] = useState("39.9448");
+  const [longitude, setLongitude] = useState(null);
+  const [latitude, setLatitude] = useState(null);
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
@@ -43,14 +46,16 @@ function App() {
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange} />
-      { currentWeather && <CurrentWeather data={ currentWeather } /> }
-      { forecast && <Forecast data={ forecast } /> }
-      <Map
-        longitude={longitude}
-        latitude={latitude}
-        zoom={11}
-        mapType="streetView"
-      />
+      {currentWeather && <CurrentWeather data={currentWeather} />}
+      {forecast && <Forecast data={forecast} />}
+      {currentWeather && forecast && longitude && latitude && (
+        <Map
+          longitude={longitude}
+          latitude={latitude}
+          zoom={11}
+          mapType="streetView"
+        />
+      )}
     </div>
   );
 }

@@ -35,8 +35,8 @@
 }
 
 .daily-item{
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: #ffffff05;
+    backdrop-filter: blur(3px);
     box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 30%);
     border-radius: 15px;
     height: 40px;

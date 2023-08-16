@@ -3,9 +3,10 @@
   border-radius: 6px;
   box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 30%);
   color: #ffffff;
-  background: url(current-weather.jpg);
+  background: #ffffff25;
   margin: 20px auto 0 auto;
   padding: 0px 20px 20px 20px;
+  backdrop-filter: blur(3px);
 }
 
 .top,
@@ -17,6 +18,7 @@
 .city {
   font-weight: 600;
   font-size: 29px;
+  text-shadow: 1px 1px 2px #000;
   line-height: 1;
   margin: 0;
   letter-spacing: 1px;
@@ -25,6 +27,7 @@
 .weather-description {
   font-weight: 500;
   font-size: 19px;
+  text-shadow: 1px 1px 2px #000;
   line-height: 1;
   margin: 0;
 }
@@ -37,6 +40,7 @@
 .temperature {
     font-size: 90px;
     font-weight: 600;
+    text-shadow: 1px 1px 2px #000;
     width: auto;
     letter-spacing: -5px;
     margin: 10px 0;
